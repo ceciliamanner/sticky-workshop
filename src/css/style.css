@@ -1,0 +1,84 @@
+@font-face {
+    font-family: Kalam-Regular;
+    src: url(../assets/fonts/Kalam-Regular.ttf);
+}
+
+@font-face {
+    font-family: Kalam-Bold;
+    src: url(../assets/fonts/Kalam-Bold.ttf);
+}
+@font-face {
+    font-family: GreatVibes-Regular;
+    src: url(../assets/fonts/GreatVibes-Regular.ttf);
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    font-family: Kalam-Regular, sans-serif;
+}
+
+.header{
+    text-align: center;
+    padding: var(--spacing-medium);
+    font-family: GreatVibes-Regular;
+}
+
+/* ----------------- */
+main {
+    height: 100%;
+    flex-grow: 1; /*fill up empty space*/
+    display: flex;
+    flex-direction: column;
+}
+/* ----------------- */
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-small) 0;
+}
+.form label {
+    display: none;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+.form__input-container{
+    display: flex;
+    width: 100%;
+}
+.form__input{
+    flex: 1;
+    height: 32px;
+    padding: 0 var(--spacing-x-small);
+    border-bottom: 2px solid black;
+}
+
+.form__subject--input{
+    border-right: 2px solid black;
+}
+
+.form__note--input{
+    width: 100%;
+    resize: none;
+    padding: 0 var(--spacing-x-small);
+}
+
+.form__submit--button{
+    height: 32px;
+    background-color: var(--color-submit-buttons);
+    font-size: var(--font-size-base);
+}
+.form__submit--button:hover{
+    opacity: 0.9;
+}
+.form__error--text{
+    visibility: hidden;
+    text-align: center;
+    padding: var(--spacing-x-small) 0;
+}

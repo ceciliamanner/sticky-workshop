@@ -1,0 +1,14 @@
+* {
+    margin: o;
+    padding: 0;
+    box-sizing: none;
+    list-style: none;
+}
+
+input, textarea{
+    border: none;
+}
+button {
+    cursor: pointer;
+    border: none;
+}
