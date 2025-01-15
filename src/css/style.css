@@ -82,3 +82,62 @@ main {
     text-align: center;
     padding: var(--spacing-x-small) 0;
 }
+
+/* ----------------- */
+
+.notes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-medium);
+    width: 95%;
+    background-color: var(--color-note-container);
+    flex-grow: 1;
+    margin: 0 auto; /*to get it in a row in the middle */
+    padding: var(--spacing-medium);
+}
+.note-card{
+    min-height: 200px;
+    max-height: 250px;
+    background-color: var(--color-note-background);
+    line-break: anywhere; /*jump to the next line in the text */ 
+    hyphens: auto;
+}
+.note-card__details-tools-container{
+    display: flex;
+    border-bottom: 1px solic black;
+    padding-left: var(--spacing-x-small);
+    background-color: var(--color-card-header);
+}
+
+.note-card__details-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+    flex-grow: 1;
+    font-family: Kalam-bold;
+}
+
+.note-card__tools-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.note-card__delete-button 
+.note-card__edit-button {
+    flex-grow: 1;
+    padding: var(--spacing-small);
+    background-color: var(--color-note-buttons);
+    border-left: 1px solid black; 
+}
+
+.note-card__delete-button{
+    border-bottom: 2px solid black;
+}
+.note-card__delete-button 
+.note-card__edit-button:hover { 
+    opacity: 0.9;
+}
+
+.note-card__text {
+    padding: var(--spacing-small);
+}
