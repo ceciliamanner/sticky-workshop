@@ -1,5 +1,6 @@
 import addNotes from "./addNotes.js";
 import renderNotes from "./renderNotes.js";
+import validateNotes from "./validateNotes.js";
 
 // Selecting elements
 const form = document.querySelector(".form");
@@ -13,6 +14,10 @@ document.addEventListener("DOMContentLoaded", renderNotes);
 // Add submit element to the form 
 form.addEventListener("submit", (e) => {
     e.preventDefault() 
+    // if validation fails, prvent form submission 
+    if(!validateNotes(subjectInput, dateInput, noteText)){
+        return
+    }; 
     addNotes(subjectInput, dateInput, noteText); 
-    renderNotes()
+    renderNotes(); 
 }); 
