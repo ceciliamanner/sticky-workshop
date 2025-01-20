@@ -31,7 +31,7 @@ const validateNotes = (subject, date, text) => {
     // Hide the success message after 2 seconds 
     setTimeout(() => {
         errorParagraph.style.visibility = ""; 
-    },2000); 
+    },4000); 
     return true; 
 
 
