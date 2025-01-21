@@ -2,12 +2,13 @@ import renderNotes from "./renderNotes";
 import storeNotes from "./storeNotes";
 
 const displayDeleteModal = (subject, id) => {
-    const deleteModal = document.querySelector(".delete-modal");
+    const deleteModal = document.querySelector(".delete-modal"); //* notesubject? 
     const deleteMessage = document.querySelector(".delete-modal__text");
+    const confirmDeleteButton = document.querySelector(".delete-modal__confirm-button");
 
     deleteModal.classList.add("display-modal");
-    deleteMessage.textContent = `Are you sure you want to delete ${subject}`;
-    const confirmDeleteButton = document.querySelector(".delete-modal__confirm-button");
+    deleteMessage.textContent = `Are you sure you want to delete ${subject}?`;
+   
     confirmDeleteButton.addEventListener("click", () => {
         confirmDelete(id);
     }); 
@@ -26,12 +27,12 @@ initializedCloseModal();
 
 const confirmDelete = (id) => {
     const notesList = JSON.parse(localStorage.getItem("notes")); 
-    const filteredArray = notesList.filter((note) => note.id !== id); 
-    storeNotes(filteredArray);
+    const UpdatedArray = notesList.filter((note) => note.id !== id); 
+    storeNotes(UpdatedArray);
     renderNotes(); 
     closeModal(); 
 };
 
 
 
-export {displayDeleteModal, closeModal}; 
+export {displayDeleteModal, closeModal, initializedCloseModal}; 

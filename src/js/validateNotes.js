@@ -3,6 +3,7 @@ const validateNotes = (subject, date, text) => {
     const formattedSubject = subject.value.trim(); 
     const formmatedDate = date.value.trim();
     const formmatedText = text.value.trim(); 
+    errorParagraph.style.visibility = "hidden";
 
     // Validate subject
     if(!formattedSubject){
@@ -26,7 +27,7 @@ const validateNotes = (subject, date, text) => {
     }
     // if validation passed, provide a success feedback
     errorParagraph.style.visibility = "visible"; 
-    errorParagraph.textContent = "notes submitted successfully 🦋"
+    errorParagraph.textContent = "note submitted successfully 🦋"
 
     // Hide the success message after 2 seconds 
     setTimeout(() => {

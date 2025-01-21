@@ -3,7 +3,7 @@ import storeNotes from './storeNotes.js';
 
 export const generateRandomNumber = () => {
     // Math.random() * (min - max + 1) + min     
-    return Math.floor(Math.random() * (10 - -10 + 1) + -10)
+    return Math.floor(Math.random() * (10 - -10 + 1)) + -10;
 }
 
 const addNotes = (subject, date, text) => {
@@ -16,12 +16,8 @@ const addNotes = (subject, date, text) => {
         text: text.value.trim(), 
         rotation: generateRandomNumber(), 
     };
-    console.log(note);
     
-    notesArray.push(note)
-    console.log(notesArray);
-    
-
+    notesArray.push(note);
     storeNotes(notesArray);
 };
 

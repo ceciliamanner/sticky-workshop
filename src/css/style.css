@@ -185,3 +185,8 @@ font-family: Kalam-Bold;
 background-color: var(--color-submit-buttons);
 border: 1px solid black; 
 }
+
+/* edit mode */
+.note-card-edited {
+    background-color: rgb(171, 141, 125);
+}
