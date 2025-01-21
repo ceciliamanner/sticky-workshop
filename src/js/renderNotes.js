@@ -42,7 +42,7 @@ const renderNotes = () => {
 
              // Add classes 
             noteCard.classList.add("note-card"); 
-            detailsToolsContainer.classList.add("note-card__details-toolscontainer");
+            detailsToolsContainer.classList.add("note-card__details-tools-container");
             dateSubjectContainer.classList.add("note-card__details-container"); 
             editDeleteContainer.classList.add("note-card__tools-container"); 
             deleteButton.classList.add("note-card__delete-button");
@@ -67,6 +67,12 @@ const renderNotes = () => {
 
             }); 
 
+            noteCard.addEventListener("click", () => {
+                document.querySelectorAll(".note-card").forEach(card => {
+                    card.style.zIndex = 0; 
+                });
+                noteCard.style.zIndex = 1; 
+            }); 
         });
 
     };

@@ -24,6 +24,7 @@ body{
     text-align: center;
     padding: var(--spacing-medium);
     font-family: GreatVibes-Regular;
+    font-size: var(--font-size-medium);
 }
 
 /* ----------------- */
@@ -46,7 +47,7 @@ main {
 .form{
     display: flex;
     flex-direction: column;
-    min-width: 50%;
+    min-width: 40%;
 }
 .form__input-container{
     display: flex;
@@ -71,6 +72,7 @@ main {
 
 .form__submit--button{
     height: 32px;
+    cursor: pointer;
     background-color: var(--color-submit-buttons);
     font-size: var(--font-size-base);
 }
@@ -131,7 +133,7 @@ main {
 }
 
 .note-card__delete-button{
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
 }
 .note-card__delete-button 
 .note-card__edit-button:hover { 
